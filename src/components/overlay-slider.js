@@ -16,17 +16,15 @@ export default class OverlaySlider extends React.Component {
 
 	overlayButtonStyle(){
 		let style = {
+			fontSize: this.props.data.overlayButtonStyle.FontSize,
+			backgroundColor: this.props.data.overlayButtonStyle.bgColor,
+			color: this.props.data.overlayButtonStyle.color,
+			transition:this.props.data.overlayButtonStyle.trans,
 			position: 'absolute',
-			fontSize: 18,
-			top: 0,
-			// right: 0,
-			backgroundColor:'hsla(0,0%,0%,0.4)',
-			height: '100%',
-			color: '#fff',
 			textAlign: 'center',
-			fontWeight:600,
+			top: 0,
+			height: '100%',
 			width: '100%',
-			transition:'all .9s ease-in-out',
 		}
 
 
@@ -77,10 +75,9 @@ export default class OverlaySlider extends React.Component {
 			left: 0,
 			marginLeft: 20,
 			height: '100%',
-			// display:'none'
 			width: window.innerWidth - 20,
 			zIndex: 9,
-			transition:'all .9s ease-in-out',
+			transition:'all .5s ease-in-out',
 		}
 
 
@@ -94,15 +91,39 @@ export default class OverlaySlider extends React.Component {
 		return style;
 	}
 
+	OverlayContentImageStyle(){
+		let style = {
+			display: 'block',
+			width:'100%', 
+			height: 'auto', 
+			float:'left', 
+			padding: '12px 5px', 
+			padding:5
+		}
+		return style;
+	}
+
+	cnotentImageStyle(){
+		let style = {
+			width: '33%', 
+			padding: '14px 3px',
+			height:'100%', 
+			float:'left', 
+			display:'block'
+		}
+		return style;
+	}
 
 	ShowOverlayContent(){
 
 		const cnotentImages = this.props.data.overlayItems.map((val, key)=>{
-			// console.log(val, key);
-			// console.log(val.imgURL);
 			return(
-					<a style={{width: '33%', height:'100%', float:'left', display:'block'}} key={key} href={val.shopLink} target="_blank">
-						<img style={{display: 'block',width:'100%', height: '100%', float:'left', padding: '12px 5px', padding:5}} src={val.imgURL} alt='Look1' />
+					<a style={this.cnotentImageStyle()} key={key} href={val.shopLink} target="_blank">
+						<div style={{display:'table', height:'100%'}}>
+							<div  style={{display:'table-cell', verticalAlign: 'middle'}}>
+								<img style={this.OverlayContentImageStyle()} src={val.imgURL} alt='Look1' />
+							</div>
+						</div>
 					</a>
 				)
 		});
@@ -111,12 +132,12 @@ export default class OverlaySlider extends React.Component {
 	render() {
 		return(
 			<div class="wrap-container">
-				<div style={{position:'relative'}} class="container">
-					<img onClick={this.clickmaster.bind(this)} style={{display: 'block',width:'100%', height: 300}} src= {this.props.data.masterimage} alt="Master Image" />
+				<div style={{position:'relative', overflow: 'hidden'}} class="container">
+					<img onClick={this.clickmaster.bind(this)} style={{display: 'block',width:'100%'}} src= {this.props.data.masterimage} alt="Master Image" />
 					<div style={this.overlayButtonStyle()}>
 						<div onClick={this.clickmaster.bind(this)} style={{display: 'table', height:'100%', zIndex: 99}}>
 
-							<div style={{width:20, display:'table-cell', verticalAlign: 'middle'}}>
+							<div style={{width:20, display:'table-cell', verticalAlign: 'middle', fontWeight: 'bold', fontSize: 22, padding: 4}}>
 								{this.showOverlayText()}
 							</div>
 						</div>
