@@ -26,12 +26,9 @@ export default class OverlaySlider extends React.Component {
 			.from(this.refs.img1, 0.5, { y: '100%' }, '-=0.25')
 			.from(this.refs.img2, 0.5, { y: '100%' }, '-=0.25')
 			.from(this.refs.openArrow, 1, {x:+2,rotation: '+=180', ease:  Back.easeOut.config(1)}, '-=1')
-			.to(this.refs.openArrow, 1, {x:+3,rotation: '+=180', ease:  Back.easeOut.config(1)}, '-=1');
+			.to(this.refs.openArrow, 1, {x:+3,rotation: '+=180', ease:  Back.easeOut.config(1)}, '-=1')
+			.from(this.refs.viewAll, 0.7, { y: +150 }, '-=0.25');
 	}
-
-
-
-
 
 	animateStyle(){
 		let style={
@@ -75,11 +72,11 @@ export default class OverlaySlider extends React.Component {
 	OverlayContentImageStyle(){
 		let style = {
 			display: 'block',
-			width:'33.3%', 
+			width:'23.3%', 
 			height: 'auto', 
 			float:'left', 
 			padding: '12px 5px', 
-			padding:'32px 5px 0px 19px'
+			padding:'112px 3px 0px 22px'
 		}
 		return style;
 	}
@@ -96,14 +93,22 @@ export default class OverlaySlider extends React.Component {
 	// }
 
 	render() {
-// console.log(this.props.data.overlayItems.map(val, key));
+console.log(this.props.data.overlayItems);
 		const cnotentImages = this.props.data.overlayItems.map((val, key)=>{
 					// console.log('img'+key);
 			return(
+					<div>
 					<a key={key} href={val.shopLink} target="_blank"><img ref={'img'+key}  style={this.OverlayContentImageStyle()} src={val.imgURL} /></a>
-				)
+					{/*<a key={key} href={val.viewAll}>View</a>*/}
+					</div>
+			)
 		});
-
+		const viewAllB= this.props.data.overlayItems.map((val, key)=>{
+			return(				
+				<a key={key} href={val.viewAll} target="_blank">						
+				</a>
+			)
+		});
 		return(
 			<div class="wrap-container">
 				<div style={{position:'relative', overflow: 'hidden'}} class="container">
@@ -112,13 +117,15 @@ export default class OverlaySlider extends React.Component {
 					
 
 					<div ref="overlay" onClick={this.clickmaster.bind(this)} style={this.animateStyle()} ref="overlay">
-						<div ref="openArrow" style={{color:'#fff', fontWeight: 'bold', fontSize: 22, padding: '4px 0px' ,top:'40%',position:'absolute',zIndex:1}}>></div>
+						<div ref="openArrow" style={{color:'#fff', fontWeight: 'bold', fontSize: 22, padding: '4px 0px' ,top:'43%',position:'absolute',zIndex:1}}>></div>
 						{cnotentImages}
-						
+						<a href="https://www.myntra.com" target="_blank" style={{color:'#000'}}><div ref="viewAll" style={{background:'#fff', padding: '1% 3%',position:'absolute',bottom:'4%',left:'40%', textAlign:'center'}}>View All</div></a>
+
 					</div>
-			
-					
+
 				</div>
+
+
 
 			</div>
 		);

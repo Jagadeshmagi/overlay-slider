@@ -15,6 +15,7 @@ export default {
 		trans:'all .5s ease-in-out'
 	},
 	overlayItems:[
+
 		{
 			imgURL:'https://s-media-cache-ak0.pinimg.com/736x/00/db/4c/00db4c65efdee2313dbedfaac9c6e618.jpg',
 			text: 'Lehenga Choli',
@@ -29,6 +30,7 @@ export default {
 			imgURL:'https://s-media-cache-ak0.pinimg.com/736x/16/45/37/164537cdafc892f4c0312bb270065883.jpg',
 			text:'Embroidered Lehenga Choli',
 			shopLink:'http://www.myntra.com/881023'
-		}
+		},
+
 	]
 }
