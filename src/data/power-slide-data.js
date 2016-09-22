@@ -1,5 +1,5 @@
 export default {
-	masterimage:'http://g03.a.alicdn.com/kf/HTB17exdIXXXXXaMXpXXq6xXFXXX1/New-Arrival-2015-Spring-Autumn-Fashion-Slim-font-b-Skirt-b-font-font-b-Suits-b.jpg',
+	masterimage:'http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474450628098-workwear-women-kurta-solids.jpg',
 	slideDirection: 'right',
 	overLayColor:'#666',
 	overlayWidth: '50px',
@@ -17,20 +17,20 @@ export default {
 	overlayItems:[
 
 		{
-			imgURL:'https://s-media-cache-ak0.pinimg.com/736x/00/db/4c/00db4c65efdee2313dbedfaac9c6e618.jpg',
+			imgURL:'http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635676-kurta-solids-plain.png',
 			text: 'Lehenga Choli',
 			shopLink:'http://www.myntra.com/881021'
 		},
 		{
-			imgURL:'https://s-media-cache-ak0.pinimg.com/564x/0b/1d/6d/0b1d6d062401f856a3e132e9cb32d15a.jpg',
+			imgURL:'http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635690-kurta-solids-contrast-yoke.png',
 			text: 'Lehenga Choli with Dupatta',
 			shopLink:'http://www.myntra.com/1274958'
 		},
 		{
-			imgURL:'https://s-media-cache-ak0.pinimg.com/736x/16/45/37/164537cdafc892f4c0312bb270065883.jpg',
+			imgURL:'http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635713-kurta-solids-contrast-borders.png',
 			text:'Embroidered Lehenga Choli',
 			shopLink:'http://www.myntra.com/881023'
-		},
-
+		}
 	]
+
 }

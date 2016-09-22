@@ -17,9 +17,12 @@
     "url": "https://github.com/Jagadeshmagi/overlay-slider/issues"
   },
   "dependencies": {
-    "react-dom": "~15.1.0",
+    "exenv": "^1.2.1",
+    "kw-react-tween-state": "^0.1.5",
+    "normalize.css": "~4.1.1",
+    "object-assign": "^4.1.0",
     "react": "~15.1.0",
-    "normalize.css": "~4.1.1"
+    "react-dom": "~15.1.0"
   },
   "devDependencies": {
     "babel-loader": "~6.2.4",

@@ -13,9 +13,24 @@ html {
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
-
+img{
+	width:100%;
+	display:block;
+}
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
+}
+.transition {
+    -webkit-transition-duration: 3s; 
+    transition-duration: 3s;
+}
+
+.blurImg {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
 }
