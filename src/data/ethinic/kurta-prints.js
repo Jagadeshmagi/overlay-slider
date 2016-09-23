@@ -4,6 +4,7 @@ export default {
 	overLayColor:'#666',
 	overlayWidth: '50px',
 	indicator: '&#60;',
+	link:'http://www.myntra.com/women-ethnic-viewall-prints',
 	overlayTextstyle:{
 		fontFamily:'Whitney, Arial, sans-serif',
 		fontSize:15
@@ -29,7 +30,7 @@ export default {
 		{
 			imgURL:'http://assets.myntassets.com/assets/images/lookbook/2016/9/22/11474539557815-kurta-placement-print.jpg',
 			text: 'kurta-placement-print',
-			shopLink:'http://www.myntra.com/kurtas-and-suits-menu?src=tNav&f=Kurta_Shape_article_attr%3Aa-line%2Cpathani%2Cstraight%3A%3AOccasion_article_attr%3Adaily%2520wear%2Cfusion%3A%3Acategories%3AKurtas'
+			shopLink:'http://www.myntra.com/women-ethnic-casual-graphic-striped-kurtas'
 		},
 
 	]

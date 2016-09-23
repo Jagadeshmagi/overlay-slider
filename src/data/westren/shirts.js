@@ -4,6 +4,7 @@ export default {
 	overLayColor:'#666',
 	overlayWidth: '50px',
 	indicator: '&#60;',
+	link:'http://www.myntra.com//tops-and-tees-menu?src=tNav&f=Occasion_article_attr%3Acasual%2Cformal%2Csemi%2520formal%3A%3AShirt_Length_article_attr%3Aregular%3A%3Acategories%3AShirts',
 	overlayTextstyle:{
 		fontFamily:'Whitney, Arial, sans-serif',
 		fontSize:15
@@ -29,7 +30,7 @@ export default {
 		{
 			imgURL:'http://assets.myntassets.com/v1474546201/radium/office-women/shirts-printed.jpg',
 			text: 'shirts-printed',
-			
+			shopLink:'http://www.myntra.com/tops-and-tees-menu?src=tNav&f=Occasion_article_attr%3Acasual%2Cformal%2Csemi%2520formal%3A%3APattern_article_attr%3Aprinted%3A%3AShirt_Length_article_attr%3Aregular%3A%3Acategories%3AShirts'
 		},
 
 	]

@@ -3,19 +3,19 @@ import _ from 'lodash';
 import { TweenLite, TimelineLite } from 'gsap';
 import { Link, Element } from 'react-scroll';
 import Ga from '../functions/Ga';
-import KurtaSolids from '../data/ethinic/kurta-solids';
-import KurtaPrints from '../data/ethinic/kurta-prints';
-import KurtaIndoWestern from '../data/ethinic/kurta-indo-western';
-import KurtaSets from '../data/ethinic/kurta-sets';
-import Tops from '../data/westren/tops';
-import Shirts from '../data/westren/shirts';
-import DressesNJumpsuit from '../data/westren/dresses-n-jumpsuit';
-import Jackets from '../data/westren/jackets';
+// import KurtaSolids from '../data/ethinic/kurta-solids';
+// import KurtaPrints from '../data/ethinic/kurta-prints';
+// import KurtaIndoWestern from '../data/ethinic/kurta-indo-western';
+// import KurtaSets from '../data/ethinic/kurta-sets';
+// import Tops from '../data/westren/tops';
+// import Shirts from '../data/westren/shirts';
+// import DressesNJumpsuit from '../data/westren/dresses-n-jumpsuit';
+// import Jackets from '../data/westren/jackets';
 export default class OverlaySlider extends React.Component {	
 	constructor(props){
 		super(props);
 		this.state = {
-			open: (props.isOpen) ? true : false,
+			open:false,
 			ImagesLoades: false
 		}
 	}
@@ -36,9 +36,9 @@ export default class OverlaySlider extends React.Component {
 			.to(this.refs.openArrow, 0.1, {x:+16,rotation: '+=180'}, 0)
 			.from(this.refs.viewAll, 0.6, { y: +150 }, '-=0.25');
 
-		if (this.props.isOpen) {
-			this.timeline.play();
-		}
+		// if (this.props.isOpen) {
+		// 	this.timeline.play();
+		// }
 	}
 	componentWillUnmount(){
 		window.removeEventListener('scroll', this.handelScroll.bind(this));
@@ -52,7 +52,7 @@ export default class OverlaySlider extends React.Component {
 		const bottomOffset = topOffset + this.refs.wrapper.offsetHeight;
 		// console.log('hi scroll',windowBottomOffset, bottomOffset);
 
-		if(windowBottomOffset >= bottomOffset + this.windowHeight * 0.12 && windowTopOffset <= topOffset + this.windowHeight * 0.12){
+		if(windowBottomOffset >= bottomOffset + this.windowHeight * 0.11 && windowTopOffset <= topOffset + this.windowHeight * 0.11){
 			// setTimeout(()=>{
 				this.setState({
 					open: true
@@ -82,9 +82,11 @@ export default class OverlaySlider extends React.Component {
 		return style;
 	}
 
+
+
 	clickmaster(e){
 	console.log(e.target.closest('a'));
-
+	// Ga({action:'overShop', label: e.target.closest('a').href});
 		if (e.target.closest('a')) {
 
 				this.setState({
@@ -154,7 +156,7 @@ export default class OverlaySlider extends React.Component {
 	// }
 
 	render() {
-		// console.log(this.props.data.overlayItems);
+		// console.log(this.props.data.link);
 		const cnotentImages = this.props.data.overlayItems.map((val, key)=>{
 					// console.log('img'+key);
 		return(
@@ -184,8 +186,8 @@ export default class OverlaySlider extends React.Component {
 					<div ref="openArrow" style={this.clickArrow()}>></div>
 					<div style={{width:'100%', background:'#efefef',height: '56%', bottom: 0, position: 'absolute'}}>{cnotentImages}</div>
 					{/*<a href="https://www.myntra.com" target="_blank" style={{color:'#fff'}}>*/}
-						<div ref="viewAll" style={{background:'rgb(101, 98, 98)',fontSize:'12px',color:'#fff', padding: '1% 5%',position:'absolute',bottom:'2%',left:'37%', textAlign:'center'}}>
-						VIEW ALL</div>
+						<a href={this.props.data.link} target="_blank"><div ref="viewAll" style={{background:'rgb(101, 98, 98)',fontSize:'12px',color:'#fff', padding: '1% 5%',position:'absolute',bottom:'2%',left:'37%', textAlign:'center'}}>
+						VIEW ALL</div></a>
 					{/*</a>*/}
 
 				</div>

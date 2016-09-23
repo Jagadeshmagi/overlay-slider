@@ -4,6 +4,7 @@ export default {
 	overLayColor:'#666',
 	overlayWidth: '50px',
 	indicator: '&#60;',
+	link:'http://www.myntra.com/women-ethnic-kurta-sets-all',
 	overlayTextstyle:{
 		fontFamily:'Whitney, Arial, sans-serif',
 		fontSize:15
