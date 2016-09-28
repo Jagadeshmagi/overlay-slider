@@ -42,17 +42,17 @@ export default class Page extends React.Component {
 		<div className="mainWrapper">
 				
 				<img onClick={this.handelScrollLink} src="http://assets.myntassets.com/v1474104195/radium/office-men/business-casual-blank-banner.jpg" />
-				<div style={{width:"72%",position:'absolute',top:'19%',left:'14%'}}>
+				<div style={{width:"76%",position:'absolute',top:'19%',left:'15%'}}>
 					<Link to="ethinic" smooth={true} duration={500}>
-						<img  alt="ethinic" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635433-workwear-women-ethnic-casual-button.png" style={{width:'33.3%',float:'left'}} />
+						<img  alt="ethinic" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635433-workwear-women-ethnic-casual-button.png" style={{width:'33.3%',float:'left',position: 'relative',}} />
 					</Link>
 
 					<Link to="westren" smooth={true} duration={500}>
-						<img  alt="westren" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635349-workwear-women-western-casual-button.png" style={{width:'33.3%',float:'left'}} />
+						<img  alt="westren" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635349-workwear-women-western-casual-button.png" style={{width:'33.3%',float:'left',position: 'relative',left:'-4%'}} />
 					</Link>
 
 					<Link to="power" smooth={true} duration={500}>
-						<img  alt="power" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635363-workwear-women-power-dressing-button.png" style={{width:'33.3%',float:'left'}} />
+						<img  alt="power" onClick={this.handelScrollLink} src="http://assets.myntassets.com/assets/images/lookbook/2016/9/21/11474440635363-workwear-women-power-dressing-button.png" style={{width:'33.3%',float:'left',position: 'relative',left:'-8%'}} />
 					</Link>
 
 				</div>
@@ -91,9 +91,13 @@ export default class Page extends React.Component {
 							<a href='http://www.myntra.com/jeans-and-jeggings-menu?src=tNav&f=Denim_Fade_article_attr%3Ano%2520fade%3A%3ADenim_Shade_article_attr%3Adark%2Clight%2Cmedium%3A%3ADistress%252FTorn_article_attr%3Aclean%2520look%3A%3AFit_article_attr%3Aregular%2520fit%2Crelaxed%2520fit%2Cskinny%2520fit%2Cslim%2520fit%2Csuper%2520skinny%2520fit%3A%3ALength_article_attr%3Aankle%2520length%2Cfull%2520length%3A%3Acategories%3AJeans' target='_blank'>
 								<img src = "http://assets.myntassets.com/assets/images/lookbook/2016/9/22/11474540451980-bottomwear-jeans.jpg"style={{width:'33.3%',float:'left',padding:'3%'}}  />
 							</a>
+							<a href='http://www.myntra.com/women-work-dress-material' target='_blank'>
+								<img src = "http://assets.myntassets.com/v1475053327/radium/office-women/workwear-women-dress-material.jpg"style={{width:'100%',float:'left',padding:'3%'}}  />
+							</a>
 						</div>
 					</div>
 				</div>	
+
 				<div className="ethinicFeatures" onClick={this.shopBrand}>
 					<img src='http://assets.myntassets.com/v1474541970/radium/office-women/workwear-women-mock-01_06.jpg' />
 					<div style={{minHeight:'100%'}}>
@@ -175,7 +179,20 @@ export default class Page extends React.Component {
 							<img src="http://assets.myntassets.com/v1474543152/radium/office-women/power-dressing-friday.jpg" />
 						</a>
 					</Carousel>
-				</div>	
+				</div>
+				<div className='sarees' style={{width:'100%'}} onClick={this.shopProduct}>
+				<img src = "http://assets.myntassets.com/v1475053327/radium/office-women/workwear-women-sarees.jpg" />
+					<a href='http://www.myntra.com/women-work-cotton-sarees' target='_blank'>
+						<img src = "http://assets.myntassets.com/v1475053327/radium/office-women/workwear-women-cotton-saree.jpg"style={{width:'33.3%',float:'left',padding:'3%'}}  />
+					</a>
+					<a href='http://www.myntra.com/women-work-silk-sarees' target='_blank'>
+						<img src = "http://assets.myntassets.com/v1475053327/radium/office-women/workwear-women-silk-saree.jpg"style={{width:'33.3%',float:'left',padding:'3%'}}  />
+					</a>
+					<a href='http://www.myntra.com/women-work-chiffon-sarees' target='_blank'>
+						<img src = "http://assets.myntassets.com/v1475053327/radium/office-women/workwear-women-chiffon-saree.jpg"style={{width:'33.3%',float:'left',padding:'3%'}}  />
+					</a>
+				</div>
+
 			</Element>
 			<div onClick={this.shopProduct}>
 				<img src ='http://assets.myntassets.com/v1474544030/radium/office-women/workwear-women-mock-2_01.jpg' />

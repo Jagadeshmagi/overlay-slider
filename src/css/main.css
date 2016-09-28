@@ -1,11 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+	font-family: Gohtam;
+	font-weight: normal;
+	src: url("http://res.cloudinary.com/myntra-com/raw/upload/v1471606844/fonts/gotham/Gotham-Medium.otf") format("opentype");
+}
 
 
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gohtam', sans-serif;
 }
 
 *, *:before, *:after {
@@ -33,4 +37,8 @@ img{
 	-o-filter: blur(2px);
 	-ms-filter: blur(2px);
 	filter: blur(2px);
+}
+
+ul.slider-list {
+    min-height: 150px !important;
 }
